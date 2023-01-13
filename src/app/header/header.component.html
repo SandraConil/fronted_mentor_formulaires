@@ -1,0 +1,35 @@
+<header>
+    <!-- <img class="fond" [src]="image" [alt]="title " /> -->
+                <ul class="menu">
+                <li><a href="#"> 1</a></li>
+                <li><a [routerLink]="['/page2']"> 2</a></li>
+                <li><a [routerLink]="['/page3']"> 3</a></li>
+                <li><a [routerLink]="['/page4']"> 4</a></li>
+            </ul>
+   </header>
+
+<main>
+<div class="card">
+    <div class="haut">
+        <h1 [ngStyle]="{color:isAdmin ? 'darkblue' : 'green'}"> {{titleMain}} </h1>
+        <p class="description">{{descriptionMain}} </p>
+    </div>
+    <div class="form">
+        <p>Name </p>
+        <input type="text" [(ngModel)]="name" placeholder="name">
+        <p>Email Adress </p>
+        <input type="text" [(ngModel)]="email" placeholder="your mail">
+        <p>Phone Number </p>
+        <input type="text" [(ngModel)]="phone" placeholder="phone">
+    </div>
+
+</div>
+</main>
+
+<footer>
+<div class="button form">
+    <div class="btn">
+        <button (click)="eventclick()">Next Tep</button>
+    </div>
+</div>
+</footer>
